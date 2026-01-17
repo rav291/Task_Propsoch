@@ -1,44 +1,60 @@
-Project README — Discovery Map (Next.js + React-Leaflet)
+# Property Listing Platform - Development Summary
 
-# Short summary
-This repo is a Next.js app that renders a property discovery map using react-leaflet. The app currently contains a few UI/UX bugs and small functional issues. Your task is to run the app locally, locate the TODO tasks in the codebase (files called discovery-map.tsx and page.tsx), and apply sensible fixes. This README explains how to run the app, where the tasks are, recommended fixes (practical, minimal, and robust), and how to verify them.
+## Overview
+This document outlines the improvements and bug fixes implemented for the property listing page as per the tasks.
 
-## Quick start
+## Tasks Completed
 
-Clone the repo (if not already done):
+### 1. SEO & Performance Optimization
+**Metadata Implementation**
+- Added comprehensive meta tags for improved SEO
+- Configured page to use Server-Side Rendering (SSR)
+- Implemented proper page metadata structure
 
-git clone [<repo-url>](https://github.com/trishna-ps/frontend-engineer-task.git)
-cd frontend-engineer-task
+### 2. List View Design & Implementation
+**Custom Property List Interface**
+- Designed and developed a new list view component from scratch
+- Created a unique UI/UX design (distinct from existing Propsoch interface)
+- Implemented responsive layout for optimal viewing across devices
+- Added smooth transitions and interactive elements
 
+**Pagination System**
+- Integrated pagination controls for better data management
+- Optimized data fetching to reduce load times
+- (Optional) Created custom API endpoints for server-side pagination
 
-# Install dependencies:
-pnpm i
+### 3. Map Visualization Improvements
+**Clustering & Spacing Fixes**
+- Resolved property marker overlap issues when zooming out
+- Enhanced marker distribution for better readability
+- Optimized map clustering behavior for improved UI/UX
+- Added smooth zoom transitions
 
+### 4. Leaflet Integration Bug Fixes
+**Server-Side Rendering Compatibility**
+- Fixed "window is not defined" error by addressing the hydration error in `leaflet-defaulticon-compatibility` module.
+- Implemented proper client-side only loading for Leaflet components
+- Ensured compatibility between Next.js SSR and Leaflet library
+- Added conditional imports to prevent server-side execution errors
 
-# Start dev server:
-pnpm run dev
+**Interactive Marker Functionality**
+- Implemented click handlers for property markers
+- Created popup components displaying property details
+- Added smooth popup animations and transitions
+- Integrated property data binding with marker interactions
+- Ensured proper popup positioning and responsiveness
 
+## Technical Stack
+- **Frontend Framework**: React with Next.js (SSR)
+- **Mapping Library**: React-Leaflet
+- **UI Components**: Custom-designed components
+- **Data Management**: Pagination system with lazy loading.
 
-# Open in browser:
-http://localhost:3000
+## Future Enhancements
+- Consider implementing advanced filtering options
+- Integrate map and list view synchronization
+- Implement favorites/bookmark feature
 
+---
 
-# Notes
-
-This project uses pnpm. If you don’t have pnpm: npm i -g pnpm.
-
-Node version: use a recent LTS (16.x / 18.x / 20.x). If you use nvm, run e.g. nvm use 18.
-
-
-
-# Where the tasks live:
-
-Open these files and look for the TODO comments at the top of the file:
-
-components/discovery-map.tsx
-
-src/app/page.tsx
-
-
-## Submission
-Create a new repo and send the URL via email.
+*All tasks have been completed with attention to performance, user experience, and code quality.*
