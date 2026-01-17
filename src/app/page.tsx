@@ -51,7 +51,7 @@ export default async function Page({ searchParams }: PageProps) {
     view === "list" ? PropertyListing.projects.slice(startIndex, endIndex) : [];
 
   return (
-    <div className="flex h-screen w-screen flex-col overflow-hidden bg-gray-50">
+    <div className="flex h-screen w-full flex-col overflow-hidden bg-gray-50">
       {/* Header with View Toggle */}
       <header className="flex items-center justify-between border-b border-gray-200 bg-white px-4 py-3 shadow-sm">
         <h1 className={cn("text-xl font-bold text-gray-900")}>

@@ -2,7 +2,7 @@
 
 import "leaflet/dist/leaflet.css";
 
-// Fixed the issue of markers cluttering when zooming out by importing the 
+// Fixed the issue of markers cluttering when zooming out by importing the
 // the marker cluster group and the css files associated with it
 import "react-leaflet-cluster/dist/assets/MarkerCluster.css";
 import "react-leaflet-cluster/dist/assets/MarkerCluster.Default.css";
@@ -29,6 +29,7 @@ import {
   formatPrice,
   para,
 } from "@/utils/helpers";
+import { getPropertyImageUrl } from "@/utils/image-utils";
 import { BudgetIcon } from "@/assets/budget-icon";
 import { HouseIcon } from "@/assets/house-icon";
 import { LocationIcon } from "@/assets/location-icon";
@@ -216,7 +217,7 @@ export default function DiscoveryMap({
                         {/* Added updated card to display the project details */}
                         <div className="flex w-full flex-col gap-3">
                           <Image
-                            src={project.image}
+                            src={getPropertyImageUrl(project.id)}
                             alt={project.alt}
                             width={500}
                             height={500}
